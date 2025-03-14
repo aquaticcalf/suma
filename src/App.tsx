@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom"
 import { FileSystemRouter } from "file-system-router"
 import config from "./config.json"
 
-const pages = import.meta.glob("./pages/**/*.jsx", { eager: true })
+const pages = import.meta.glob("./pages/**/*.jsx", { eager: true }) as Record< string, { default: React.ComponentType } >
 
 export default function App() {
     document.title = config.title
