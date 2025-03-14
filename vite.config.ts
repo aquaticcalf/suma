@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
@@ -13,5 +13,6 @@ export default defineConfig({
   },
   server : {
     port : 54321,
-  }
-})
+  },
+  base: mode === 'production' ? '/suma/' : '/',
+}))
