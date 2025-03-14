@@ -19,7 +19,7 @@ export default function App() {
     favicon.href = config.favicon
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <FileSystemRouter pages={pages} />
       </Router>
     </ThemeProvider>
