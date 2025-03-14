@@ -8,7 +8,7 @@ const pages = import.meta.glob("./pages/**/*.jsx", { eager: true })
 export default function App() {
     document.title = config.title
 
-    let favicon = document.querySelector("link[rel*='icon']")
+    let favicon = document.querySelector("link[rel*='icon']") as HTMLLinkElement | null
 
     if (!favicon) {
       favicon = document.createElement("link")

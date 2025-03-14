@@ -1,17 +1,17 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { useTheme } from "@/components/theme-provider"
+import { Theme, useTheme } from "@/components/theme-provider"
 import { Moon, Sun, Monitor } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 
 export function ModeToggle() {
   const { setTheme, theme } = useTheme()
-  const themeModes = ["light", "dark", "system"]
+  const themeModes: Theme[] = ["light", "dark", "system"]
   const [modeIndex, setModeIndex] = useState(themeModes.indexOf(theme || "light"))
   const [tooltipOpen, setTooltipOpen] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
 
-  const modes = [
+  const modes: { name: Theme; icon: JSX.Element }[] = [
     { name: "light", icon: <Sun className="h-[1.2rem] w-[1.2rem]" /> },
     { name: "dark", icon: <Moon className="h-[1.2rem] w-[1.2rem]" /> },
     { name: "system", icon: <Monitor className="h-[1.2rem] w-[1.2rem]" /> },
