@@ -60,7 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems = {} }) => {
   return (
     <>
       {/* desktop navbar – visible on large screens */}
-      <header className="hidden lg:flex items-center justify-between px-4 py-3 bg-background border-b border-border fixed top-0 left-0 w-full">
+      <header className="hidden lg:flex items-center justify-between px-4 py-3 bg-background border-b border-border sticky top-0 left-0 w-full">
         <div className="flex items-center gap-4">
           {renderNavItems(left, "desktop")}
         </div>
@@ -75,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems = {} }) => {
       </header>
 
       {/* mobile top navbar – visible on small screens */}
-      <header className="flex lg:hidden items-center justify-between px-4 py-3 bg-background border-b border-border fixed top-0 left-0 w-full">
+      <header className="flex lg:hidden items-center justify-between px-4 py-3 bg-background border-b border-border sticky top-0 left-0 w-full">
         <div className="flex items-center gap-4">
           {renderNavItems(left, "desktop")}
         </div>
