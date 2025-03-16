@@ -1,4 +1,4 @@
-export default function NotFound() {
+export default function FourOFour() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground">
       <div className="p-6 text-center">
