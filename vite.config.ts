@@ -35,7 +35,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     port: 54321,
   },
-  base: mode === "production" ? "/suma/" : "/",
+  base: mode === "production" ? "/" : "/",
   build: {
     rollupOptions: {
       output: {
