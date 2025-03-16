@@ -1,4 +1,4 @@
-export default function FourOFour() {
+const FourOFour = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground">
       <div className="p-6 text-center">
@@ -7,3 +7,5 @@ export default function FourOFour() {
     </div>
   )
 }
+
+export default FourOFour
